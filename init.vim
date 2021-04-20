@@ -20,7 +20,6 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 
 " Srcery color scheme
 Plug 'srcery-colors/srcery-vim'
@@ -263,7 +262,8 @@ nmap <leader>w :w!<cr>
 map <leader>pp :setlocal paste!<cr>
 
 """ => FZF
-
+" Show FZF popup with file preview when ctrl+p
+noremap <C-p> :FZF --preview cat\ {}<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
