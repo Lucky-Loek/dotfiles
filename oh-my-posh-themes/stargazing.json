@@ -1,0 +1,101 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "console_title": true,
+    "console_title_style": "template",
+    "console_title_template": "{{if .Root}}(Admin){{end}} {{.Path}}",
+    "blocks": [
+        {
+            "type":"newline"
+        },
+        {
+            "type":"prompt",
+            "alignment": "left",
+            "segments": [
+                {
+                    "type":"root",
+                    "style":"plain",
+                    "foreground": "yellow",
+                    "properties": {
+                        "prefix": "",
+                        "root_icon": "(Admin) "
+                    }
+                },
+                {
+                    "type":"path",
+                    "style":"plain",
+                    "foreground": "blue",
+                    "properties": {
+                        "prefix": "",
+                        "style": "full"
+                    }
+                },
+                {
+                    "type":"git",
+                    "style":"plain",
+                    "foreground": "magenta",
+                    "properties": {
+                        "branch_icon": "\ue0a0 ",
+                        "display_status": false
+                    }
+                },
+                {
+                    "type": "time",
+                    "style": "plain",
+                    "foreground": "lightBlue",
+                    "properties": {
+                        "time_format": "🕙 15:04:05"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "prompt",
+            "alignment": "right",
+            "segments": [
+                {
+                    "type": "executiontime",
+                    "style": "plain",
+                    "foreground": "cyan",
+                    "properties": {
+                      "threshold": 500,
+                      "style": "austin",
+                      "prefix": "⏲️ "
+                    }
+                },
+                {
+                    "type": "battery",
+                    "style": "powerline",
+                    "properties": {
+                        "charging_icon": "🔌 ",
+                        "charging_color": "lightGreen",
+                        "discharging_icon": "🔋 ",
+                        "discharging_color": "lightRed",
+                        "charged_icon": "⚡ ",
+                        "charged_color": "lightBlue"
+                      }
+                }
+            ]
+        },
+        {
+            "type":"newline"
+        },
+        {
+            "alignment": "left",
+            "type":"prompt",
+            "segments": [
+                {
+                    "type":"exit",
+                    "style":"plain",
+                    "foreground": "#FCE8C3",
+                    "properties": {
+                        "prefix": "\u276f",
+                        "display_exit_code": true,
+                        "color_background": true,
+                        "error_color": "red",
+                        "always_enabled": true
+                    }
+                }
+            ]
+        }
+    ]
+}
