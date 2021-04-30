@@ -250,7 +250,7 @@ map <leader>pp :setlocal paste!<cr>
 
 """ => FZF
 " Show FZF popup with file preview when ctrl+p
-noremap <C-p> :FZF --preview cat\ {}<cr>
+nnoremap <C-p> :FZF --preview cat\ {}<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
