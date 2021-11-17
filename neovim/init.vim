@@ -30,6 +30,9 @@ Plug 'itchyny/lightline.vim'
 " Buftabline
 Plug 'ap/vim-buftabline'
 
+" EditorConfig
+Plug 'editorconfig/editorconfig-vim'
+
 call plug#end()
 
 
